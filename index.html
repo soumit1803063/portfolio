@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212529;
+            /* Dark background */
+            color: #f8f9fa;
+            /* Light text color for readability */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #343a40;
+            /* Darker sidebar */
+            color: white;
+            height: 100vh;
+            padding-top: 80px;
+            position: fixed;
+            overflow-y: auto;
+            width: 25%;
+            border-right: 2px solid #ffc107;
+            /* Accent color */
+        }
+
+        .sidebar h2 {
+            color: #ffc107;
+            /* Accent color for headings */
+            font-size: 1.5rem;
+            /* Increased font size for better visibility */
+            margin-bottom: 15px;
+            /* Space below heading */
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffc107;
+            /* Accent border color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Subtle shadow for depth */
+            margin-bottom: 15px;
+            /* Space below the image */
+        }
+
+        .social-icons a {
+            color: #ffc107;
+            /* Accent color for icons */
+            margin: 0 8px;
+            font-size: 1.5rem;
+            /* Increased icon size for better visibility */
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            /* Hover effect */
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 25%;
+            padding: 20px;
+            padding-top: 50px;
+            max-height: 100vh;
+            overflow-y: auto;
+            margin-left: 25%;
+        }
+
+        .section h5 {
+            color: #ffc107;
+            /* Accent color for section headers */
+            background-color: #343a40;
+            /* Same as sidebar for consistency */
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .section-content {
+            padding: 10px 0;
+        }
+
+        .card {
+            background-color: #495057;
+            /* Card background for better contrast */
+            color: #f8f9fa;
+            /* Text color in cards */
+        }
+
+        .card-title {
+            color: #ffc107;
+            /* Accent color for card titles */
+        }
+
+        /* Personal Information and Languages Sections */
+        .info-section {
+            background-color: #495057;
+            /* Darker background for better contrast */
+            padding: 15px;
+            /* Increased padding for better spacing */
+            border-radius: 5px;
+            /* Slight rounding of corners */
+            margin-top: 15px;
+            /* Space above these sections */
+        }
+
+        .info-section h6 {
+            color: #ffc107;
+            /* Accent color for section titles */
+            margin-bottom: 10px;
+            /* Space below the heading */
+        }
+
+        .info-section p {
+            font-size: 0.9rem;
+            /* Font size for text */
+            color: #e0e0e0;
+            /* Muted light gray for text for better readability */
+            margin-bottom: 5px;
+            /* Space between items */
+        }
+
+        .info-section strong {
+            color: #ffc107;
+            /* Accent color for labels */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            height: 100vh;
+            padding-top: 0;
+            /* Remove padding-top if using top position */
+            position: fixed;
+            top: 56px;
+            /* Adjust this to match the height of your navbar */
+            overflow-y: auto;
+            width: 25%;
+            border-right: 2px solid #ffc107;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 25%;
+            padding: 20px;
+            padding-top: 56px;
+            /* Adjust this to match the height of your navbar */
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Fixed Black Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Let's Code</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills & Technologies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar text-center p-4">
+        <img src="soumit.jpeg" alt="Profile Image" class="profile-img mb-3">
+        <h2 class="text-warning">Soumit Das</h2>
+
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/somudasctgbn/" target="_blank" class="social-link text-warning mx-2">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/soumit_d_a_s/" target="_blank" class="social-link text-warning mx-2">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/soumit-das-a607642a7/" target="_blank"
+                class="social-link text-warning mx-2">
+                <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://github.com/soumit1803063" target="_blank" class="social-link text-warning mx-2">
+                <i class="fab fa-github fa-lg"></i>
+            </a>
+        </div>
+
+        <div class="mt-3">
+            <p class="mb-1">
+                <a href="mailto:soumitdas0410@gmail.com" style="color: #adb5bd; text-decoration: none;">
+                    <i class="fas fa-envelope me-2"></i> soumitdas0410@gmail.com
+                </a>
+            </p>
+            <p class="mb-1">
+                <a href="tel:+8801871773734" style="color: #adb5bd; text-decoration: none;">
+                    <i class="fas fa-phone me-2"></i> +880 1871 773734
+                </a>
+            </p>
+            <p class="mb-1">
+                <a href="https://www.google.com/maps/search/?api=1&query=9+Jamal+Khan+Rd,+Chattogram" target="_blank"
+                    style="color: #adb5bd; text-decoration: none;">
+                    <i class="fas fa-map-marker-alt me-2"></i> 9 Jamal Khan Rd, Chattogram
+                </a>
+            </p>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="info-section mt-4">
+            <p class="mb-1"><strong>Date of Birth:</strong> October 4, 2000</p>
+            <p class="mb-1"><strong>Nationality:</strong> Bangladeshi</p>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="info-section mt-4">
+            <p class="mb-1"><strong>Bengali:</strong> Native</p>
+            <p class="mb-1"><strong>English:</strong> Proficient</p>
+            <p class="mb-1"><strong>IELTS Score:</strong> Overall 7.00</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Education Section -->
+        <div id="education" class="section mb-4">
+            <h5 class="text-center mb-3">🎓 Education</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-2"><strong>Bachelor of Science in Computer Science &
+                                    Engineering</strong></h6>
+                            <p class="card-text mb-1">Rajshahi University of Engineering & Technology (RUET), Bangladesh
+                            </p>
+                            <p class="card-text mb-1"><strong>GPA:</strong> 3.55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-2"><strong>Higher Secondary School Certificate (HSC)</strong></h6>
+                            <p class="card-text mb-1">Govt. City College, Chattogram</p>
+                            <p class="card-text mb-1"><strong>GPA:</strong> 5.00 out of 5.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="card-title mb-2"><strong>Secondary School Certificate (SSC)</strong></h6>
+                            <p class="card-text mb-1">Nasirabad Govt. High School</p>
+                            <p class="card-text mb-1"><strong>GPA:</strong> 5.00 out of 5.00</p>
+                            <p class="card-text mb-0"><strong>Passing Year:</strong> 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="section">
+            <h5 class="text-center mb-3">📂 Projects</h5>
+            <div class="section-content">
+
+                <!-- Computer Architecture -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Computer Architecture</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/4-bit-cpu" target="_blank">4-bit
+                                CPU</a></strong><br>
+                        <em>Languages/Tools Used:</em> Digital Logic, Circuit Design<br>
+                        <em>Keywords:</em> Simulation, Digital Design, Hardware Architecture
+                    </p>
+                </div>
+
+                <!-- Computer Vision -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Computer Vision</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/parcel-counter" target="_blank">Parcel
+                                Counter</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, YOLOv8x, DeepSORT, Re-Identification<br>
+                        <em>Keywords:</em> Object Detection, Tracking, Computer Vision
+                    </p>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/virtualpainting" target="_blank">Virtual
+                                Painting</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, OpenCV, MediaPipe, Tkinter<br>
+                        <em>Keywords:</em> Hand Gesture Recognition, GUI, Image Processing
+                    </p>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Machine Learning</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/Behavioral-Profiling"
+                                target="_blank">Behavioral Profiling</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, pandas, matplotlib, Regression Models<br>
+                        <em>Keywords:</em> Profiling, Predictive Modeling, Feature Selection, Feature Engineering,
+                        Exploratory Data Analysis
+                    </p>
+                    <p>
+                        <strong><a href="https://github.com/1803063soumit/UNSWNB15" target="_blank">Cyber Security
+                                (UNSW-NB15)</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, Feature Engineering, Classification<br>
+                        <em>Keywords:</em> Cyber Security, Anomaly Detection, Feature Selection, Feature Engineering,
+                        Exploratory Data Analysis
+                    </p>
+                </div>
+
+                <!-- Raw Code -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Raw Code</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/problem_solving" target="_blank">Problem
+                                Solving</a></strong><br>
+                        <em>Languages/Tools Used:</em> C++, Competitive Programming<br>
+                        <em>Keywords:</em> Algorithms, Data Structures, Optimization
+                    </p>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/AI" target="_blank">AI Searching
+                                Algorithms</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python<br>
+                        <em>Keywords:</em> Search Algorithms, Artificial Intelligence, Pathfinding
+                    </p>
+                </div>
+
+                <!-- Web Development -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Web Development</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/Coders-Arena" target="_blank">Coders
+                                Arena</a></strong><br>
+                        <em>Languages/Tools Used:</em> JavaScript, React, Node.js, Express.js, MongoDB<br>
+                        <em>Keywords:</em> Full-Stack Development, Social Networking, MERN Stack
+                    </p>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/radio_ruet_signup_signin_backend"
+                                target="_blank">Radio RUET Signup/Signin Backend</a></strong><br>
+                        <em>Languages/Tools Used:</em> JavaScript, Express.js, MongoDB<br>
+                        <em>Keywords:</em> Authentication, API, Backend Development
+                    </p>
+                </div>
+
+                <!-- Modular Coding -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Modular Coding</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/NIFTI-Processor" target="_blank">NIFTI
+                                Processor</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, NIFTI Files<br>
+                        <em>Keywords:</em> Medical Imaging, Image Processing, Data Manipulation
+                    </p>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/Augmentation-3D" target="_blank">Augmentation
+                                3D</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, 3D Image Processing<br>
+                        <em>Keywords:</em> Data Augmentation, Rotation, Scaling, Noise
+                    </p>
+                </div>
+
+                <!-- Miscellaneous -->
+                <div class="project-group"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-bottom: 15px; background-color: #292626;">
+                    <h6>Miscellaneous</h6>
+                    <p>
+                        <strong><a href="https://github.com/soumit1803063/google_translator" target="_blank">Google
+                                Translator</a></strong><br>
+                        <em>Languages/Tools Used:</em> Python, googletrans, Tkinter<br>
+                        <em>Keywords:</em> Translation, GUI Application, NLP
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Research Section -->
+        <div id="research" class="section">
+            <h5 class="text-center mb-3">🔬 Research Work</h5>
+            <div class="section-content">
+
+                <!-- Project 1 -->
+                <div class="research-item">
+                    <p><strong>Advancing Glioma Segmentation: A Robust 3D Residual Attention U-Net Framework for
+                            Multimodal MRI Images</strong></p>
+                    <ul>
+                        <li><strong>Publication:</strong> 3rd International Conference on Computing Advancements 2024,
+                            American International University - Bangladesh (AIUB) (Accepted, yet to be published)</li>
+                        <li><strong>Duration:</strong> 2023 - 2024</li>
+                        <li><strong>Description:</strong> This research presents a robust 3D Residual Attention U-Net
+                            for segmenting subregions of
+                            brain tumors in multimodal MRI images, achieving higher accuracy with less training time
+                            and resources. A part of the work (only whole tumor segmentation) has been submitted
+                            and accepted for presentation to a reputed conference.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="research-item">
+                    <p><strong>BanglaOngko: A New Dataset for Accurate Bengali Mathematical Expression Detection
+                            Utilizing YOLOv8 Architecture</strong></p>
+                    <ul>
+                        <li><strong>Publication:</strong> 2nd International Conference on Big Data, IoT, and Machine
+                            Learning (BIM 2023), Daffodil International University & Jahangirnagar University (Accepted,
+                            yet to be published)</li>
+                        <li><strong>Year:</strong> 2023</li>
+                        <li><strong>Description:</strong> In this research, handwritten Bengali mathematical expressions
+                            were converted to printed
+                            text. YOLOv8 was utilized to identify the positions of digits and operators. Subsequently,
+                            a novel algorithm based on statistical concepts was developed to generate the final printed
+                            version of the expressions.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="research-item">
+                    <p><strong>CBAM Enhanced Collaborative Network for Binary Classification of Breast Tumours</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Publication:</strong> 3rd International Conference on Advancement in Electrical and
+                            Electronic Engineering (ICAEEE 2024), Dhaka University of Engineering and Technology (DUET)
+                        </li>
+                        <li><strong>Publisher:</strong> IEEE | <a
+                                href="https://doi.org/10.1109/ICAEEE62219.2024.10561843" target="_blank">DOI:
+                                10.1109/ICAEEE62219.2024.10561843</a></li>
+                        <li><strong>Year:</strong> 2024</li>
+                        <li><strong>GitHub:</strong> <a
+                                href="https://github.com/1803063soumit/CBAM-Enhanced-Collaborative-Network"
+                                target="_blank">CBAM-Enhanced-Collaborative-Network</a></li>
+                        <li><strong>Description:</strong> This research aims to classify breast tumors as benign or
+                            malignant using a neural
+                            network with two distinct paths: a collaborative path and a transfer learning path. The
+                            network incorporates a Convolutional Block Attention Module (CBAM) to improve
+                            performance. By leveraging these advanced deep learning techniques, the proposed model
+                            achieves superior accuracy in tumor classification compared to state-of-the-art models.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Skills Section -->
+        <div id="skills" class="section mb-4">
+            <h5 class="text-center mb-3">🖥️ Skills & Technologies</h5>
+            <div class="card bg-secondary text-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title text-warning"><strong>Languages</strong></h6>
+                    <p class="card-text">
+                        <i class="fab fa-c"></i> C,
+                        <i class="fab fa-cplusplus"></i> C++,
+                        <i class="fab fa-java"></i> Java,
+                        <i class="fab fa-js"></i> JavaScript,
+                        <i class="fab fa-python"></i> Python
+                    </p>
+                </div>
+            </div>
+            <div class="card bg-secondary text-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title text-warning"><strong>Web Technologies</strong></h6>
+                    <p class="card-text">
+                        <i class="fab fa-html5"></i> HTML5,
+                        <i class="fab fa-css3"></i> CSS3,
+                        <i class="fab fa-react"></i> React,
+                        <i class="fas fa-server"></i> Express,
+                        <i class="fab fa-node-js"></i> Node.js
+                    </p>
+                </div>
+            </div>
+            <div class="card bg-secondary text-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title text-warning"><strong>Databases</strong></h6>
+                    <p class="card-text">
+                        <i class="fas fa-database"></i> MySQL,
+                        <i class="fas fa-database"></i> MongoDB
+                    </p>
+                </div>
+            </div>
+            <div class="card bg-secondary text-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title text-warning"><strong>Machine Learning & Data Science</strong></h6>
+                    <p class="card-text">
+                        <i class="fab fa-python"></i> OpenCV,
+                        <i class="fab fa-python"></i> pandas,
+                        <i class="fab fa-python"></i> TensorFlow
+                    </p>
+                </div>
+            </div>
+            <div class="card bg-secondary text-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title text-warning"><strong>Research Fields</strong></h6>
+                    <p class="card-text">
+                        <i class="fas fa-search"></i> Computer Vision,
+                        <i class="fas fa-cube"></i> Image Segmentation,
+                        <i class="fas fa-image"></i> Optical Character Recognition (OCR),
+                        <i class="fas fa-palette"></i> Image Classification,
+                        <i class="fas fa-robot"></i> Machine Learning,
+                        <i class="fas fa-brain"></i> Deep Learning
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

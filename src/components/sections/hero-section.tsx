@@ -4,6 +4,7 @@ import {
   Facebook,
   Instagram,
   Rss,
+  BookOpen,
   Mail,
   Phone,
   MapPin,
@@ -31,6 +32,8 @@ const socialIcons: Record<SocialIcon, typeof Github> = {
 };
 
 export function HeroSection() {
+  const blogUrl = siteConfig.social.find((link) => link.icon === "blog")?.href;
+
   return (
     <section
       id="top"
@@ -84,6 +87,17 @@ export function HeroSection() {
                 {siteConfig.tagline}
               </p>
             </div>
+
+            {blogUrl && (
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                <Button asChild size="lg">
+                  <a href={blogUrl} target="_blank" rel="noopener noreferrer">
+                    <BookOpen className="size-4" />
+                    Read My Blog
+                  </a>
+                </Button>
+              </div>
+            )}
 
             <div className="grid gap-3 sm:grid-cols-2">
               <Card className="bg-card/50 sm:col-span-2 lg:col-span-1">

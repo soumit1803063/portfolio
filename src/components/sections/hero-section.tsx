@@ -74,7 +74,6 @@ export function HeroSection() {
 
           <div className="space-y-6 text-center lg:text-left">
             <div className="space-y-3">
-              <Badge variant="accent">Kaz Software · Associate Software Engineer</Badge>
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
                 Hi, I&apos;m{" "}
                 <span className="bg-gradient-to-r from-primary via-violet-400 to-accent bg-clip-text text-transparent">
@@ -84,18 +83,6 @@ export function HeroSection() {
               <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg lg:mx-0">
                 {siteConfig.tagline}
               </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button asChild size="lg">
-                <a href="#projects">View Projects</a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href={`mailto:${siteConfig.email}`}>
-                  <Mail className="size-4" />
-                  Contact Me
-                </a>
-              </Button>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">

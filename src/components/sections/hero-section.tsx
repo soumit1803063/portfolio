@@ -3,8 +3,11 @@ import {
   Linkedin,
   Facebook,
   Instagram,
-  Rss,
+  Newspaper,
   BookOpen,
+  CalendarDays,
+  Flag,
+  Languages,
   Mail,
   Phone,
   MapPin,
@@ -28,7 +31,7 @@ const socialIcons: Record<SocialIcon, typeof Github> = {
   linkedin: Linkedin,
   facebook: Facebook,
   instagram: Instagram,
-  blog: Rss,
+  blog: Newspaper,
 };
 
 export function HeroSection() {
@@ -160,11 +163,22 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
-              <Badge variant="outline">{siteConfig.dateOfBirth}</Badge>
-              <Badge variant="outline">{siteConfig.nationality}</Badge>
+              <Badge variant="secondary" className="gap-1.5 px-3 py-1">
+                <CalendarDays className="size-3.5 text-primary" />
+                Born {siteConfig.dateOfBirth}
+              </Badge>
+              <Badge variant="secondary" className="gap-1.5 px-3 py-1">
+                <Flag className="size-3.5 text-primary" />
+                {siteConfig.nationality}
+              </Badge>
               {siteConfig.languages.map((lang) => (
-                <Badge key={lang.name} variant="secondary">
-                  {lang.name}: {lang.level}
+                <Badge
+                  key={lang.name}
+                  variant="secondary"
+                  className="gap-1.5 px-3 py-1"
+                >
+                  <Languages className="size-3.5 text-primary" />
+                  {lang.name} — {lang.level}
                 </Badge>
               ))}
             </div>

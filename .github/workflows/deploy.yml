@@ -18,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
 
       - name: Install dependencies
@@ -35,7 +35,7 @@ jobs:
           VITE_BASE_PATH: /portfolio/
 
       - name: Deploy to gh-pages (portfolio repo)
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
@@ -53,13 +53,13 @@ jobs:
     steps:
       - name: Checkout
         if: ${{ env.PAT != '' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
         if: ${{ env.PAT != '' }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
 
       - name: Install dependencies
@@ -74,7 +74,7 @@ jobs:
 
       - name: Deploy to user site repository
         if: ${{ env.PAT != '' }}
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           external_repository: soumit1803063/soumit1803063.github.io

@@ -3,6 +3,7 @@ import {
   Linkedin,
   Facebook,
   Instagram,
+  Rss,
   Mail,
   Phone,
   MapPin,
@@ -26,6 +27,7 @@ const socialIcons: Record<SocialIcon, typeof Github> = {
   linkedin: Linkedin,
   facebook: Facebook,
   instagram: Instagram,
+  blog: Rss,
 };
 
 export function HeroSection() {
@@ -79,9 +81,6 @@ export function HeroSection() {
                   {siteConfig.name}
                 </span>
               </h1>
-              <p className="text-lg font-medium text-primary sm:text-xl md:text-2xl">
-                {siteConfig.title}
-              </p>
               <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg lg:mx-0">
                 {siteConfig.tagline}
               </p>

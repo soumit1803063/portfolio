@@ -37,5 +37,10 @@ export const siteConfig: Profile = {
       href: "https://www.instagram.com/soumit_d_a_s/",
       icon: "instagram",
     },
+    {
+      label: "Tech Blog",
+      href: "https://bondhuta.vercel.app",
+      icon: "blog",
+    },
   ],
 };

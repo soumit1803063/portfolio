@@ -1,0 +1,83 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-portfolio
+  cancel-in-progress: true
+
+jobs:
+  deploy-portfolio-path:
+    name: Deploy to /portfolio
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build for /portfolio path
+        run: npm run build:portfolio
+        env:
+          VITE_BASE_PATH: /portfolio/
+
+      - name: Deploy to gh-pages (portfolio repo)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          force_orphan: true
+
+  deploy-root-path:
+    name: Deploy to root (soumit1803063.github.io)
+    runs-on: ubuntu-latest
+    # Requires a PERSONAL_ACCESS_TOKEN secret (PAT with repo scope) to push to the
+    # external user-site repo. Without it, every step below is skipped and the job
+    # passes as a no-op, so the workflow never fails just because the secret is unset.
+    env:
+      PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    steps:
+      - name: Checkout
+        if: ${{ env.PAT != '' }}
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: ${{ env.PAT != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        if: ${{ env.PAT != '' }}
+        run: npm ci
+
+      - name: Build for root path
+        if: ${{ env.PAT != '' }}
+        run: npm run build:root
+        env:
+          VITE_BASE_PATH: /
+
+      - name: Deploy to user site repository
+        if: ${{ env.PAT != '' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          external_repository: soumit1803063/soumit1803063.github.io
+          publish_branch: main
+          publish_dir: ./dist
+          force_orphan: true

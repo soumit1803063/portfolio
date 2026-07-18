@@ -13,12 +13,8 @@ import { Button } from "@/components/ui/button";
 
 export function ResearchSection() {
   return (
-    <PageSection id="research" muted>
-      <SectionHeading
-        icon={FlaskConical}
-        title="Research Work"
-        subtitle="Published and accepted conference papers"
-      />
+    <PageSection id="research">
+      <SectionHeading icon={FlaskConical} title="Research & Publications" />
 
       <div className="grid gap-4 md:gap-6">
         {researchContent.map((paper) => (

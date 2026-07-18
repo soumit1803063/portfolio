@@ -6,12 +6,8 @@ import { Badge } from "@/components/ui/badge";
 
 export function SkillsSection() {
   return (
-    <PageSection id="skills">
-      <SectionHeading
-        icon={Cpu}
-        title="Skills & Technologies"
-        subtitle="Tools and domains I work with"
-      />
+    <PageSection id="skills" muted>
+      <SectionHeading icon={Cpu} title="Skills & Technologies" />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {skillsContent.map((group) => (

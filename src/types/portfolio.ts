@@ -18,6 +18,7 @@ export interface Language {
 
 export interface Profile {
   name: string;
+  brand: string;
   title: string;
   tagline: string;
   email: string;
@@ -57,6 +58,32 @@ export interface ProjectCategory {
   projects: Project[];
 }
 
+export type FeaturedLinkIcon = "live" | "github" | "api" | "external";
+
+export interface FeaturedLink {
+  label: string;
+  href: string;
+  icon: FeaturedLinkIcon;
+}
+
+export interface Metric {
+  label: string;
+  value: string;
+}
+
+export interface FeaturedProject {
+  name: string;
+  tagline: string;
+  context: string;
+  status?: string;
+  recent?: boolean;
+  stack: string[];
+  highlights: string[];
+  metrics?: Metric[];
+  links?: FeaturedLink[];
+  note?: string;
+}
+
 export interface ResearchItem {
   title: string;
   publication: string;
@@ -73,6 +100,11 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface ExperienceProject {
+  name: string;
+  bullets: string[];
+}
+
 export interface ExperienceItem {
   role: string;
   company: string;
@@ -80,6 +112,8 @@ export interface ExperienceItem {
   period: string;
   employmentType?: string;
   current?: boolean;
-  highlights: string[];
+  summary?: string;
+  projects: ExperienceProject[];
+  metrics?: Metric[];
   technologies: string[];
 }

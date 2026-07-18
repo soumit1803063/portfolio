@@ -13,12 +13,8 @@ import { Separator } from "@/components/ui/separator";
 
 export function ExperienceSection() {
   return (
-    <PageSection id="experience">
-      <SectionHeading
-        icon={Briefcase}
-        title="Experience"
-        subtitle="Production ML, backend systems, and healthcare AI"
-      />
+    <PageSection id="experience" muted>
+      <SectionHeading icon={Briefcase} title="Experience" />
 
       <div className="grid gap-6">
         {experienceContent.map((job) => (
@@ -38,15 +34,42 @@ export function ExperienceSection() {
                 </CardDescription>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {job.highlights.map((highlight) => (
-                  <li key={highlight} className="flex gap-2">
-                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{highlight}</span>
-                  </li>
+
+            <CardContent className="space-y-6">
+              {job.metrics && (
+                <div className="grid grid-cols-3 gap-2 rounded-lg border bg-background/40 p-3 sm:gap-4 sm:p-4">
+                  {job.metrics.map((metric) => (
+                    <div key={metric.label} className="text-center">
+                      <p className="text-base font-bold text-primary sm:text-xl">
+                        {metric.value}
+                      </p>
+                      <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground sm:text-xs">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div className="space-y-5">
+                {job.projects.map((project) => (
+                  <div key={project.name} className="space-y-2.5">
+                    <h4 className="flex items-center gap-2 text-sm font-semibold sm:text-base">
+                      <span className="h-4 w-1 rounded-full bg-primary" />
+                      {project.name}
+                    </h4>
+                    <ul className="space-y-2 pl-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      {project.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-2.5">
+                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary/60" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
               <Separator />
               <div className="flex flex-wrap gap-1.5">
                 {job.technologies.map((tech) => (

@@ -1,6 +1,7 @@
 import { Header, Footer } from "@/components/layout";
 import {
   HeroSection,
+  FeaturedSection,
   ExperienceSection,
   EducationSection,
   ProjectsSection,
@@ -14,6 +15,7 @@ export function App() {
       <Header />
       <main>
         <HeroSection />
+        <FeaturedSection />
         <ExperienceSection />
         <EducationSection />
         <ProjectsSection />

@@ -13,11 +13,7 @@ import { Badge } from "@/components/ui/badge";
 export function EducationSection() {
   return (
     <PageSection id="education">
-      <SectionHeading
-        icon={GraduationCap}
-        title="Education"
-        subtitle="Academic background and achievements"
-      />
+      <SectionHeading icon={GraduationCap} title="Education" />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {educationContent.map((item) => (
           <Card

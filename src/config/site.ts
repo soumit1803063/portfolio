@@ -2,9 +2,10 @@ import type { Profile } from "@/types";
 
 export const siteConfig: Profile = {
   name: "Soumit Das",
-  title: "Associate Software Engineer · ML & Backend",
+  brand: "Now You See Me",
+  title: "Associate Software Engineer · Backend & AI",
   tagline:
-    "Software engineer focused on scalable backend systems, production ML pipelines, and end-to-end AI integration that drives measurable cost and efficiency gains.",
+    "Software engineer building scalable backend systems and production AI — from multi-tenant SaaS platforms to agentic LLM pipelines.",
   email: "soumitdas0410@gmail.com",
   phone: "+880 1871 773734",
   location: "Dhaka, Bangladesh",

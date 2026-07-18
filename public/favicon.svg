@@ -1,4 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#7c3aed"/>
-  <text x="16" y="22" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="14" font-weight="700">SD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="8" y1="12" x2="56" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#12b9c9"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#12b9c9"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </radialGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0a0a0f"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="url(#g)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M10 32 C18 19 46 19 54 32 C46 45 18 45 10 32 Z" fill="none" stroke="url(#g)" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="8.5" fill="url(#iris)"/>
+  <circle cx="32" cy="32" r="3.5" fill="#0a0a0f"/>
+  <circle cx="29.5" cy="29.5" r="1.6" fill="#ffffff" fill-opacity="0.9"/>
 </svg>

@@ -7,7 +7,12 @@ export type {
   EducationItem,
   Project,
   ProjectCategory,
+  FeaturedLinkIcon,
+  FeaturedLink,
+  Metric,
+  FeaturedProject,
   ResearchItem,
   SkillGroup,
+  ExperienceProject,
   ExperienceItem,
 } from "./portfolio";

@@ -6,12 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function ProjectsSection() {
   return (
-    <PageSection id="projects">
-      <SectionHeading
-        icon={FolderKanban}
-        title="Projects"
-        subtitle="Browse by category — tap a tab on mobile or desktop"
-      />
+    <PageSection id="projects" muted>
+      <SectionHeading icon={FolderKanban} title="Projects" />
 
       <Tabs defaultValue={projectsContent[0].category} className="w-full">
         <TabsList className="h-auto w-full justify-start overflow-x-auto">

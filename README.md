@@ -1,114 +1,148 @@
-<div align="center">
+<h1 align="center">Hi, I'm <b>Soumit Das</b></h1>
 
-# 👁️ Now You See Me
+🎓 **Education**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Bachelor of Science** in **Computer Science & Engineering**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Rajshahi University of Engineering & Technology (RUET), Bangladesh***  
+&nbsp;&nbsp;&nbsp;&nbsp;**CGPA:** 3.55  
 
-### The personal portfolio of **Soumit Das** — Associate Software Engineer, Backend & AI
+🌎 **Languages**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Bengali** (Native), **English** (Proficient)
 
-Scalable backend systems and production AI, from multi-tenant SaaS platforms to agentic LLM pipelines.
+🔭 **Current Work**  
+&nbsp;&nbsp;&nbsp;&nbsp;Focused on **Generative AI**  
+&nbsp;&nbsp;&nbsp;&nbsp;Advancing backend development skills with **FastAPI**
 
-[![Live](https://img.shields.io/badge/Live-soumit1803063.github.io-8b5cf6?style=for-the-badge)](https://soumit1803063.github.io/)
-[![Blog](https://img.shields.io/badge/Blog-bondhuta-12b9c9?style=for-the-badge)](https://bondhuta.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soumit-das-a607642a7/)
+🌐 **Interests**  
+&nbsp;&nbsp;&nbsp;&nbsp;Keen interest in **problem-solving**, **web technologies**, and **machine learning** applications
 
-![React](https://img.shields.io/badge/React_19-20232a?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646cff?style=flat-square&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)
-![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=flat-square&logo=shadcnui&logoColor=white)
 
-</div>
+## 📂 Projects
 
----
+### Computer Architecture
+- **[4-bit CPU](https://github.com/soumit1803063/4-bit-cpu)**  
+  - **Languages/Tools Used**: Digital Logic, Circuit Design
+  - **Keywords**: Simulation, Digital Design, Hardware Architecture
+### LLM
+- **[LLM-JobScout](https://github.com/soumit1803063/LLM-JobScout)**  
+  - **Live Link**: [llm-jobscout-h2agdm9r2bspabr8ssguy9.streamlit.app](https://llm-jobscout-h2agdm9r2bspabr8ssguy9.streamlit.app/)
+  - **Languages/Tools Used**: Python, LLAMA-3, LangChain, Streamlit, GroqCloud
+  - **Keywords**: LLM, Prompt Engineering, Deployment
+    
+- **[LLAMA-Finetune-Question-Answering](https://github.com/soumit1803063/LLAMA-Finetune-Question-Answering)**  
+  - **Languages/Tools Used**: Python, Pytorch, LLAMA-2, Hugging Face, Chroma, 
+  - **Keywords**: LLM, LLAMA-2, QA, Finetune
+### Computer Vision
+- **[Finetune-Image-to-Image-Stable-Diffusion](https://github.com/soumit1803063/Finetune-Image-to-Image-Stable-Diffusion)**  
+  - **Languages/Tools Used**: Python, Hugging Face, DreamBooth, CompVis/stable-diffusion-v1-4
+  - **Keywords**: Stable Diffusion, Finetune
+    
+- **[Parcel Counter](https://github.com/soumit1803063/parcel-counter)**  
+  - **Languages/Tools Used**: Python, YOLOv8x, DeepSORT, Re-Identification
+  - **Keywords**: Object Detection, Tracking, Computer Vision
 
-## Overview
+- **[Virtual Painting](https://github.com/soumit1803063/virtualpainting)**  
+  - **Languages/Tools Used**: Python, OpenCV, MediaPipe, Tkinter
+  - **Keywords**: Hand Gesture Recognition, GUI, Image Processing
 
-**Now You See Me** is a fast, responsive, single-page portfolio built with React 19, TypeScript, Tailwind CSS, and [shadcn/ui](https://ui.shadcn.com). Content is fully data-driven — every section reads from typed content files in [`src/content`](src/content), so updating the site means editing data, not markup.
+### Research Work
+- **[CBAM-Enhanced Collaborative Network](https://github.com/1803063soumit/CBAM-Enhanced-Collaborative-Network)**  
+  - **Languages/Tools Used**: Keras, CBAM, DVC
+  - **Keywords**: Collaborative Learning, Transfer Learning, Feature Fusion, Medical Imaging
+  - **DOI**: [10.1109/ICAEEE62219.2024.10561843](https://doi.org/10.1109/ICAEEE62219.2024.10561843)
 
-It is deployed twice from a single build to serve both a project path and the root user site:
+### Machine Learning
+- **[Behavioral Profiling](https://github.com/soumit1803063/Behavioral-Profiling)**  
+  - **Languages/Tools Used**: Python, pandas, matplotlib, Regression Models
+  - **Keywords**: Profiling, Predictive Modeling, Feature Selection, Feature Engineering, Exploratory Data Analysis
 
-| URL | Description |
-| --- | --- |
-| **[soumit1803063.github.io](https://soumit1803063.github.io/)** | Root user site |
-| **[soumit1803063.github.io/portfolio](https://soumit1803063.github.io/portfolio/)** | Project path |
+- **[Cyber Security (UNSW-NB15)](https://github.com/1803063soumit/UNSWNB15)**  
+  - **Languages/Tools Used**: Python, Feature Engineering, Classification
+  - **Keywords**: Cyber Security, Anomaly Detection, Feature Selection, Feature Engineering, Exploratory Data Analysis
 
-## Highlights
+### Raw Code
+- **[Problem Solving](https://github.com/soumit1803063/problem_solving)**  
+  - **Languages/Tools Used**: C++, Competitive Programming
+  - **Keywords**: Algorithms, Data Structures, Optimization
 
-- **Featured Work** — a spotlight for the most recent and significant projects (Ochel, TaskMind, Shongi) with impact metrics, tech stack, and live links.
-- **Experience** — grouped by employer and sub-project, with headline impact metrics (cost cuts, accuracy gains, efficiency).
-- **Research & Publications**, **Projects** by category, **Education**, and **Skills**.
-- **Dark, modern UI** with a purple→cyan accent system, an eye-motif logo, and a responsive mobile navigation drawer.
-- **Type-safe content model** — adding a project or role is a matter of editing a typed array.
+- **[AI Searching Algorithms](https://github.com/soumit1803063/AI)**  
+  - **Languages/Tools Used**: Python
+  - **Keywords**: Search Algorithms, Artificial Intelligence, Pathfinding
 
-## Tech Stack
+### Web Development
+- **[Coders Arena](https://github.com/soumit1803063/Coders-Arena)**  
+  - **Languages/Tools Used**: JavaScript, React, Node.js, Express.js, MongoDB
+  - **Keywords**: Full-Stack Development, Social Networking, MERN Stack
 
-| Layer | Choices |
-| --- | --- |
-| **Framework** | React 19 · TypeScript 5 · Vite 6 |
-| **Styling** | Tailwind CSS 3 · shadcn/ui (new-york) · lucide-react icons |
-| **Tooling** | ESLint · tsc project references |
-| **Hosting** | GitHub Pages (dual deploy via GitHub Actions) |
+- **[Radio RUET Signup/Signin Backend](https://github.com/soumit1803063/radio_ruet_signup_signin_backend)**  
+  - **Languages/Tools Used**: JavaScript, Express.js, MongoDB
+  - **Keywords**: Authentication, API, Backend Development
 
-## Project Structure
+### Modular Coding
+- **[NIFTI Processor](https://github.com/soumit1803063/NIFTI-Processor)**  
+  - **Languages/Tools Used**: Python, NIFTI Files
+  - **Keywords**: Medical Imaging, Image Processing, Data Manipulation
 
-```
-src/
-├── app/          # App shell and composition
-├── components/
-│   ├── featured/ # Featured Work cards
-│   ├── layout/   # Header, footer, section primitives
-│   ├── sections/ # Hero, Experience, Projects, Research, Skills…
-│   └── ui/       # shadcn/ui primitives
-├── config/       # Site profile + navigation
-├── content/      # Typed content (experience, featured, projects, research…)
-├── styles/       # Global styles + theme tokens
-└── types/        # Shared TypeScript models
-```
+- **[Augmentation 3D](https://github.com/soumit1803063/Augmentation-3D)**  
+  - **Languages/Tools Used**: Python, 3D Image Processing
+  - **Keywords**: Data Augmentation, Rotation, Scaling, Noise
 
-## Getting Started
+### Miscellaneous
+- **[Google Translator](https://github.com/soumit1803063/google_translator)**  
+  - **Languages/Tools Used**: Python, googletrans, Tkinter
+  - **Keywords**: Translation, GUI Application, NLP
 
-```bash
-# Install dependencies
-npm ci
+## 🌐 Connect with Me
 
-# Start the dev server
-npm run dev
+<p align="left">
+    <a href="https://linkedin.com/in/soumit-das-a607642a7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
+    <a href="https://fb.com/somudasctgbn" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="30" width="40" /></a>
+    <a href="https://www.leetcode.com/soumit1803063" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="LeetCode" height="30" width="40" /></a>
+</p>
 
-# Type-check and build for production
-npm run build
+## 🖥️ Skills & Technologies
 
-# Preview the production build
-npm run preview
-```
+### Languages
 
-## Updating Content
+<p align="left">
+    <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" width="40" height="40"/> </a>
+    <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/> </a>
+    <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="40" height="40"/> </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/> </a>
+    <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/> </a>
+</p>
 
-All content lives in [`src/content`](src/content) and [`src/config`](src/config) as typed data:
+### Web Technologies
 
-- **Featured Work** → [`src/content/featured.ts`](src/content/featured.ts)
-- **Experience** → [`src/content/experience.ts`](src/content/experience.ts)
-- **Projects** → [`src/content/projects.ts`](src/content/projects.ts)
-- **Research** → [`src/content/research.ts`](src/content/research.ts)
-- **Skills / Education** → [`src/content/skills.ts`](src/content/skills.ts) · [`src/content/education.ts`](src/content/education.ts)
-- **Profile & links** → [`src/config/site.ts`](src/config/site.ts)
+<p align="left">
+    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="40" height="40"/> </a>
+    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" width="40" height="40"/> </a>
+    <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="40" height="40"/> </a>
+    <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" width="40" height="40"/> </a>
+    <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" width="40" height="40"/> </a>
+</p>
 
-TypeScript enforces the shape of each entry, so the build fails fast if a field is missing.
+### Databases
 
-## Deployment
+<p align="left">
+    <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="40" height="40"/> </a>
+    <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="40" height="40"/> </a>
+</p>
 
-Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which builds the site twice and publishes both targets:
+### Machine Learning & Data Science
 
-- **`/portfolio`** → the `gh-pages` branch of this repo.
-- **root** → the `soumit1803063.github.io` user-site repo (requires a `PERSONAL_ACCESS_TOKEN` secret; skipped as a no-op when unset).
+<p align="left">
+    <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original-wordmark.svg" alt="OpenCV" width="40" height="40"/> </a>
+    <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original-wordmark.svg" alt="pandas" width="40" height="40"/> </a>
+    <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" width="40" height="40"/> </a>
+</p>
 
-## Connect
+## 📈 GitHub Stats
 
-- **Portfolio** · [soumit1803063.github.io](https://soumit1803063.github.io/)
-- **Blog** · [bondhuta.vercel.app](https://bondhuta.vercel.app)
-- **GitHub** · [@soumit1803063](https://github.com/soumit1803063)
-- **LinkedIn** · [soumit-das](https://www.linkedin.com/in/soumit-das-a607642a7/)
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=soumit1803063&show_icons=true&theme=radical&count_private=true" alt="GitHub Stats" />
+  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=soumit1803063&theme=radical" alt="GitHub Streak" />
+</p>
 
-<div align="center">
-
-<sub>© 2026 Soumit Das</sub>
-
-</div>
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soumit1803063&layout=compact&theme=radical" alt="Top Languages" />
+</p>

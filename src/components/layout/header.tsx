@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, Eye } from "lucide-react";
+import { Menu } from "lucide-react";
 import { navigationItems, siteConfig } from "@/config";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,13 +31,11 @@ export function Header() {
       )}
     >
       <div className="container flex h-14 items-center justify-between sm:h-16">
-        <a href="#top" className="group flex items-center gap-2">
-          <span className="flex size-8 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 transition-colors group-hover:border-primary/50">
-            <Eye className="size-4 text-primary" />
-          </span>
-          <span className="bg-gradient-to-r from-primary via-violet-400 to-accent bg-clip-text text-sm font-bold tracking-tight text-transparent sm:text-base">
-            {siteConfig.brand}
-          </span>
+        <a
+          href="#top"
+          className="bg-gradient-to-r from-primary via-violet-400 to-accent bg-clip-text text-base font-bold tracking-tight text-transparent sm:text-lg"
+        >
+          {siteConfig.brand}
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">

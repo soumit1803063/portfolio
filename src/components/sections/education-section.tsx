@@ -18,7 +18,7 @@ export function EducationSection() {
         {educationContent.map((item) => (
           <Card
             key={item.degree}
-            className="bg-card/50 transition-colors hover:border-primary/40"
+            className="transition-all hover:border-primary/40 hover:shadow-hover"
           >
             <CardHeader>
               {item.highlight && <Badge className="w-fit">RUET</Badge>}

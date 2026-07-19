@@ -4,22 +4,34 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 6% 10%;
-    --card-foreground: 0 0% 98%;
-    --primary: 263 70% 58%;
+    /* Corporate Modernism: light surfaces, professional blue, flat outlines. */
+    --background: 204 27% 96%;
+    --foreground: 200 11% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 11% 11%;
+
+    --primary: 200 100% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 187 85% 43%;
+
+    --secondary: 204 27% 96%;
+    --secondary-foreground: 0 0% 40%;
+
+    --muted: 204 27% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 210 100% 26%;
     --accent-foreground: 0 0% 100%;
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 263 70% 58%;
-    --radius: 0.75rem;
+
+    --border: 202 28% 91%;
+    --input: 202 28% 91%;
+    --ring: 200 100% 36%;
+
+    /* Command-center surfaces for terminal / inverse panels. */
+    --terminal: 200 11% 11%;
+    --terminal-foreground: 204 27% 96%;
+
+    --radius: 0.25rem;
   }
 
   * {
@@ -32,5 +44,20 @@
 
   body {
     @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* Headings carry the display face; body copy stays on Inter. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  /* Uppercase monospace metadata label, e.g. ENGINEERING_L01. */
+  .label-mono {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-primary;
   }
 }

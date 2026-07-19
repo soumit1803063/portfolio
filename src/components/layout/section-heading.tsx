@@ -6,21 +6,27 @@ interface SectionHeadingProps {
   subtitle?: string;
 }
 
+/** Derives the monospace kicker, e.g. "Featured Work" -> "FEATURED_WORK". */
+function toKicker(title: string) {
+  return title.trim().toUpperCase().replace(/\s+/g, "_");
+}
+
 export function SectionHeading({
   icon: Icon,
   title,
   subtitle,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-8 space-y-3 text-center md:mb-12">
-      <div className="mx-auto flex size-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 md:size-14">
-        <Icon className="size-5 text-primary md:size-6" />
+    <div className="mb-8 space-y-3 md:mb-12">
+      <div className="flex items-center gap-3">
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border bg-card">
+          <Icon className="size-4 text-primary" />
+        </div>
+        <span className="label-mono">{toKicker(title)}</span>
       </div>
-      <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-        {title}
-      </h2>
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
       {subtitle && (
-        <p className="mx-auto max-w-2xl text-sm text-muted-foreground sm:text-base">
+        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           {subtitle}
         </p>
       )}

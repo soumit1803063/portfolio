@@ -12,18 +12,14 @@ import {
   Phone,
   MapPin,
   ExternalLink,
+  ArrowRight,
 } from "lucide-react";
 import { siteConfig } from "@/config";
 import type { SocialIcon } from "@/types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { assetUrl } from "@/lib/utils";
 
 const socialIcons: Record<SocialIcon, typeof Github> = {
@@ -34,6 +30,30 @@ const socialIcons: Record<SocialIcon, typeof Github> = {
   blog: Newspaper,
 };
 
+const contactRows = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
+    external: false,
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: siteConfig.phone,
+    href: `tel:${siteConfig.phone.replace(/\s/g, "")}`,
+    external: false,
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: siteConfig.location,
+    href: siteConfig.locationUrl,
+    external: true,
+  },
+];
+
 export function HeroSection() {
   const blogUrl = siteConfig.social.find((link) => link.icon === "blog")?.href;
 
@@ -42,24 +62,52 @@ export function HeroSection() {
       id="top"
       className="relative overflow-hidden pb-16 pt-24 sm:pt-28 md:pb-24 md:pt-32"
     >
+      {/* Faint blueprint grid, the calm backdrop of the command-center look. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.15),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(hsl(var(--border))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border))_1px,transparent_1px)] bg-[size:40px_40px] opacity-60 [mask-image:radial-gradient(ellipse_at_top,#000_10%,transparent_70%)]"
       />
 
       <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-[auto_1fr] lg:gap-16">
-          <div className="mx-auto flex flex-col items-center gap-6 lg:mx-0">
-            <Avatar className="size-32 border-4 border-primary/30 shadow-2xl shadow-primary/20 sm:size-40 md:size-44">
-              <AvatarImage
-                src={assetUrl("soumit.jpeg")}
-                alt={siteConfig.name}
-                className="object-cover"
-              />
-              <AvatarFallback className="text-3xl">SD</AvatarFallback>
-            </Avatar>
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-primary" />
+              </span>
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
+                {siteConfig.title}
+              </span>
+            </div>
 
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+                Hi, I&apos;m <span className="text-primary">{siteConfig.name}</span>
+              </h1>
+              <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                {siteConfig.tagline}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <Button asChild size="lg">
+                <a href="#featured">
+                  View Projects
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
+              {blogUrl && (
+                <Button asChild size="lg" variant="outline">
+                  <a href={blogUrl} target="_blank" rel="noopener noreferrer">
+                    <BookOpen className="size-4" />
+                    Read My Blog
+                  </a>
+                </Button>
+              )}
+            </div>
+
+            <div className="flex flex-wrap gap-2 border-t border-border pt-6">
               {siteConfig.social.map((link) => {
                 const Icon = socialIcons[link.icon];
                 return (
@@ -76,93 +124,8 @@ export function HeroSection() {
                 );
               })}
             </div>
-          </div>
 
-          <div className="space-y-6 text-center lg:text-left">
-            <div className="space-y-3">
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                Hi, I&apos;m{" "}
-                <span className="bg-gradient-to-r from-primary via-violet-400 to-accent bg-clip-text text-transparent">
-                  {siteConfig.name}
-                </span>
-              </h1>
-              <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg lg:mx-0">
-                {siteConfig.tagline}
-              </p>
-            </div>
-
-            {blogUrl && (
-              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                <Button asChild size="lg">
-                  <a href={blogUrl} target="_blank" rel="noopener noreferrer">
-                    <BookOpen className="size-4" />
-                    Read My Blog
-                  </a>
-                </Button>
-              </div>
-            )}
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Card className="bg-card/50 sm:col-span-2 lg:col-span-1">
-                <CardHeader className="flex-row items-center gap-3 space-y-0 p-4">
-                  <Mail className="size-4 shrink-0 text-primary" />
-                  <div className="min-w-0 text-left">
-                    <CardTitle className="text-sm font-medium">Email</CardTitle>
-                    <CardDescription className="truncate">
-                      <a
-                        href={`mailto:${siteConfig.email}`}
-                        className="hover:text-foreground"
-                      >
-                        {siteConfig.email}
-                      </a>
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              <Card className="bg-card/50">
-                <CardHeader className="flex-row items-center gap-3 space-y-0 p-4">
-                  <Phone className="size-4 shrink-0 text-primary" />
-                  <div className="text-left">
-                    <CardTitle className="text-sm font-medium">Phone</CardTitle>
-                    <CardDescription>
-                      <a
-                        href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-                        className="hover:text-foreground"
-                      >
-                        {siteConfig.phone}
-                      </a>
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              <Card className="bg-card/50 sm:col-span-2">
-                <CardHeader className="flex-row items-center gap-3 space-y-0 p-4">
-                  <MapPin className="size-4 shrink-0 text-primary" />
-                  <div className="min-w-0 text-left">
-                    <CardTitle className="text-sm font-medium">
-                      Location
-                    </CardTitle>
-                    <CardDescription>
-                      <a
-                        href={siteConfig.locationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 hover:text-foreground"
-                      >
-                        <span className="line-clamp-2">
-                          {siteConfig.location}
-                        </span>
-                        <ExternalLink className="size-3 shrink-0 opacity-50" />
-                      </a>
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
+            <div className="flex flex-wrap gap-2">
               <Badge variant="secondary" className="gap-1.5 px-3 py-1">
                 <CalendarDays className="size-3.5 text-primary" />
                 Born {siteConfig.dateOfBirth}
@@ -183,6 +146,85 @@ export function HeroSection() {
               ))}
             </div>
           </div>
+
+          {/* Profile panel: avatar, contact channels, and a terminal readout. */}
+          <Card className="overflow-hidden">
+            <div className="flex items-center gap-2 border-b border-border bg-muted px-4 py-2.5">
+              <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+              <span className="size-2.5 rounded-full bg-[#febc2e]" />
+              <span className="size-2.5 rounded-full bg-[#28c840]" />
+              <span className="ml-auto font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                SD_PROFILE
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 p-5 text-center sm:flex-row sm:text-left">
+              <Avatar className="size-24 shrink-0 rounded-full border border-border sm:size-28">
+                <AvatarImage
+                  src={assetUrl("soumit.jpeg")}
+                  alt={siteConfig.name}
+                  className="object-cover"
+                />
+                <AvatarFallback className="font-display text-2xl">
+                  SD
+                </AvatarFallback>
+              </Avatar>
+              <div className="min-w-0">
+                <p className="font-display text-lg font-semibold">
+                  {siteConfig.name}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {siteConfig.title}
+                </p>
+              </div>
+            </div>
+
+            <div className="divide-y divide-border border-t border-border">
+              {contactRows.map((row) => (
+                <a
+                  key={row.label}
+                  href={row.href}
+                  target={row.external ? "_blank" : undefined}
+                  rel={row.external ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-3 px-5 py-3 transition-colors hover:bg-muted"
+                >
+                  <row.icon className="size-4 shrink-0 text-primary" />
+                  <span className="w-20 shrink-0 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                    {row.label}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate text-sm text-foreground group-hover:text-primary">
+                    {row.value}
+                  </span>
+                  {row.external && (
+                    <ExternalLink className="size-3.5 shrink-0 text-muted-foreground" />
+                  )}
+                </a>
+              ))}
+            </div>
+
+            <div className="border-t border-border bg-terminal p-4">
+              <div className="overflow-x-auto">
+                <pre className="font-mono text-[11px] leading-relaxed text-terminal-foreground sm:text-xs">
+                  <code>
+                    <span className="text-muted-foreground">$</span> whoami
+                    {"\n"}
+                    <span className="text-[#7dd3fc]">soumit_das</span>
+                    {"\n"}
+                    <span className="text-muted-foreground">$</span> cat
+                    role.txt{"\n"}
+                    <span className="text-[#7dd3fc]">{siteConfig.title}</span>
+                    {"\n"}
+                    <span className="text-muted-foreground">$</span> location
+                    {"\n"}
+                    <span className="text-[#7dd3fc]">{siteConfig.location}</span>
+                    {"\n"}
+                    <span className="text-muted-foreground">$</span>{" "}
+                    <span className="inline-block h-3 w-2 translate-y-0.5 animate-pulse bg-[#7dd3fc]" />
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

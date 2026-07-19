@@ -18,7 +18,10 @@ export function ResearchSection() {
 
       <div className="grid gap-4 md:gap-6">
         {researchContent.map((paper) => (
-          <Card key={paper.title} className="bg-card/50">
+          <Card
+            key={paper.title}
+            className="transition-all hover:border-primary/40 hover:shadow-hover"
+          >
             <CardHeader className="space-y-3">
               <div className="flex flex-wrap gap-2">
                 {paper.year && <Badge variant="accent">{paper.year}</Badge>}

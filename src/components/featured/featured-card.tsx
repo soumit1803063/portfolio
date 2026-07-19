@@ -1,5 +1,12 @@
 import type { FeaturedProject, FeaturedLinkIcon } from "@/types";
-import { ArrowUpRight, Github, Radio, TerminalSquare, Info } from "lucide-react";
+import {
+  ArrowUpRight,
+  Github,
+  Radio,
+  TerminalSquare,
+  Info,
+  CheckCircle2,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
   Card,
@@ -25,8 +32,8 @@ interface FeaturedCardProps {
 
 export function FeaturedCard({ project }: FeaturedCardProps) {
   return (
-    <Card className="flex h-full flex-col bg-card/50 transition-colors hover:border-primary/40">
-      <CardHeader className="space-y-4">
+    <Card className="flex h-full flex-col transition-all hover:border-primary/40 hover:shadow-hover">
+      <CardHeader className="space-y-4 p-5">
         <div className="flex flex-wrap items-center gap-2">
           {project.recent && (
             <Badge className="gap-1.5">
@@ -34,28 +41,26 @@ export function FeaturedCard({ project }: FeaturedCardProps) {
               Recent
             </Badge>
           )}
-          {project.status && (
-            <Badge variant="accent">{project.status}</Badge>
-          )}
+          {project.status && <Badge variant="accent">{project.status}</Badge>}
         </div>
 
         <div className="space-y-2">
-          <CardTitle className="text-xl sm:text-2xl">{project.name}</CardTitle>
-          <CardDescription className="text-sm leading-relaxed sm:text-base">
+          <p className="label-mono">{project.context}</p>
+          <CardTitle className="font-display text-xl sm:text-2xl">
+            {project.name}
+          </CardTitle>
+          <CardDescription className="text-sm leading-relaxed">
             {project.tagline}
           </CardDescription>
-          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground/80">
-            {project.context}
-          </p>
         </div>
       </CardHeader>
 
-      <CardContent className="flex flex-1 flex-col gap-5">
+      <CardContent className="flex flex-1 flex-col gap-5 p-5 pt-0">
         {project.metrics && (
-          <div className="grid grid-cols-3 gap-2 rounded-lg border bg-background/40 p-3">
+          <div className="grid grid-cols-3 gap-2 rounded-md border border-border bg-muted p-3">
             {project.metrics.map((metric) => (
               <div key={metric.label} className="text-center">
-                <p className="text-base font-bold text-primary sm:text-lg">
+                <p className="font-display text-base font-bold text-primary sm:text-lg">
                   {metric.value}
                 </p>
                 <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground sm:text-xs">
@@ -66,10 +71,10 @@ export function FeaturedCard({ project }: FeaturedCardProps) {
           </div>
         )}
 
-        <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+        <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
           {project.highlights.map((highlight) => (
             <li key={highlight} className="flex gap-2.5">
-              <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
               <span>{highlight}</span>
             </li>
           ))}
@@ -96,11 +101,7 @@ export function FeaturedCard({ project }: FeaturedCardProps) {
                     size="sm"
                     asChild
                   >
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={link.href} target="_blank" rel="noopener noreferrer">
                       <Icon className="size-3.5" />
                       {link.label}
                     </a>
@@ -111,7 +112,7 @@ export function FeaturedCard({ project }: FeaturedCardProps) {
           )}
 
           {project.note && (
-            <p className="flex items-start gap-1.5 text-xs text-muted-foreground/70">
+            <p className="flex items-start gap-1.5 text-xs text-muted-foreground">
               <Info className="mt-0.5 size-3 shrink-0" />
               <span>{project.note}</span>
             </p>

@@ -16,7 +16,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col bg-card/50 transition-colors hover:border-primary/40">
+    <Card className="flex h-full flex-col transition-all hover:border-primary/40 hover:shadow-hover">
       <CardHeader className="space-y-3">
         <CardTitle className="text-base leading-snug">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2">

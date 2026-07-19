@@ -11,13 +11,14 @@ export function SkillsSection() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {skillsContent.map((group) => (
-          <Card key={group.title} className="bg-card/50">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-semibold text-primary sm:text-base">
-                {group.title}
-              </CardTitle>
+          <Card
+            key={group.title}
+            className="transition-all hover:border-primary/40 hover:shadow-hover"
+          >
+            <CardHeader className="p-5 pb-3">
+              <CardTitle className="label-mono">{group.title}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-5 pt-0">
               <div className="flex flex-wrap gap-1.5">
                 {group.skills.map((skill) => (
                   <Badge key={skill} variant="secondary" className="text-xs">

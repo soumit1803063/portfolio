@@ -10,7 +10,7 @@ export function ProjectsSection() {
       <SectionHeading icon={FolderKanban} title="Projects" />
 
       <Tabs defaultValue={projectsContent[0].category} className="w-full">
-        <TabsList className="h-auto w-full justify-start overflow-x-auto">
+        <TabsList>
           {projectsContent.map((group) => (
             <TabsTrigger key={group.category} value={group.category}>
               {group.category}

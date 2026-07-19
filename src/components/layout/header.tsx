@@ -24,18 +24,20 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-card/60 shadow-lg backdrop-blur-xl"
-          : "bg-transparent"
+          ? "border-border bg-card/90 shadow-hover backdrop-blur-xl"
+          : "border-transparent bg-background/80 backdrop-blur-sm"
       )}
     >
-      <div className="container flex h-14 items-center justify-between sm:h-16">
-        <a
-          href="#top"
-          className="bg-gradient-to-r from-primary via-violet-400 to-accent bg-clip-text text-base font-bold tracking-tight text-transparent sm:text-lg"
-        >
-          {siteConfig.brand}
+      <div className="container flex h-14 items-center justify-between gap-4 sm:h-16">
+        <a href="#top" className="flex min-w-0 items-center gap-2.5">
+          <span className="flex size-7 shrink-0 items-center justify-center rounded bg-primary font-display text-xs font-bold text-primary-foreground">
+            SD
+          </span>
+          <span className="truncate font-display text-base font-semibold tracking-tight text-foreground sm:text-lg">
+            {siteConfig.brand}
+          </span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">

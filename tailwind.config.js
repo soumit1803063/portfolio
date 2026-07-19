@@ -5,7 +5,7 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
+        DEFAULT: "1.25rem",
         sm: "1.5rem",
         lg: "2rem",
       },
@@ -13,8 +13,8 @@ export default {
         sm: "640px",
         md: "768px",
         lg: "1024px",
-        xl: "1280px",
-        "2xl": "1400px",
+        xl: "1128px",
+        "2xl": "1128px",
       },
     },
     extend: {
@@ -44,14 +44,24 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        terminal: {
+          DEFAULT: "hsl(var(--terminal))",
+          foreground: "hsl(var(--terminal-foreground))",
+        },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.5rem",
+        md: "var(--radius)",
+        sm: "0.125rem",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Geist", "Inter", "system-ui", "sans-serif"],
+        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        // Flat-Layered depth: ambient hover lift only, no resting shadow.
+        hover: "0 4px 12px rgba(0, 0, 0, 0.08)",
       },
     },
   },

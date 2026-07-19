@@ -17,7 +17,12 @@ export function PageSection({
   return (
     <section
       id={id}
-      className={cn("py-16 md:py-24", muted && "bg-muted/30", className)}
+      className={cn(
+        "py-16 md:py-24",
+        // Alternating bands: white content surfaces over the dim page shell.
+        muted && "border-y border-border bg-card",
+        className
+      )}
     >
       <div className="container">{children}</div>
     </section>

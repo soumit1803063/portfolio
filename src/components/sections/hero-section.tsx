@@ -178,7 +178,7 @@ export function HeroSection() {
                   className="gap-1.5 px-3 py-1"
                 >
                   <Languages className="size-3.5 text-primary" />
-                  {lang.name} — {lang.level}
+                  {lang.name} · {lang.level}
                 </Badge>
               ))}
             </div>

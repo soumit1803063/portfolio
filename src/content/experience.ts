@@ -24,7 +24,7 @@ export const experienceContent: ExperienceItem[] = [
         ],
       },
       {
-        name: "TaxIntel — Tax Law Intelligence System",
+        name: "TaxIntel: Tax Law Intelligence System",
         bullets: [
           "Built a platform processing 500+ tax articles daily across 25+ sources and 148 structured categories.",
           "Designed an agentic RAG pipeline to detect regulatory updates from streaming content.",
@@ -66,14 +66,14 @@ export const experienceContent: ExperienceItem[] = [
       {
         name: "Chest X-ray Reporting System",
         bullets: [
-          "Led AI development on a vision-language pipeline for automated chest X-ray report generation — owning code reviews, sprints, and client discussions.",
+          "Led AI development on a vision-language pipeline for automated chest X-ray report generation, owning code reviews, sprints, and client discussions.",
           "Managed radiologists and annotators to build a clinically validated training dataset.",
           "Architected a multi-model inference pipeline where a segmentation model iteratively refines the region of interest to focus report generation.",
           "Built an automated retraining system and deployed containerized models on serverless infrastructure.",
         ],
       },
       {
-        name: "Shongi — Patient Health Assistant",
+        name: "Shongi: Patient Health Assistant",
         bullets: [
           "Built a live patient-facing health assistant on a multi-agent architecture (Agno) spanning intent gating, entity extraction, and follow-up questioning.",
           "Engineered lifelong patient memory on a structured-first MongoDB + vector store that invalidates outdated facts.",

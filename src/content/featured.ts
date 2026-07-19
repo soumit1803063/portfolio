@@ -21,17 +21,17 @@ export const featuredContent: FeaturedProject[] = [
       "shadcn/ui",
     ],
     highlights: [
-      "Shipped a multi-tenant headless CMS solo in 4 weeks — live with 15+ restaurants in France.",
+      "Shipped a multi-tenant headless CMS solo in 4 weeks, live with 15+ restaurants in France.",
       "Clean Architecture API with default-deny tenant isolation on both read and write, enforced by CI greps and reflection tests.",
       "Photo → animated video → live menu workflow with a <5s freshness guarantee via cache invalidation.",
-      "Real-time and background jobs run in-process (SignalR + Hangfire) — one deployable, zero extra infrastructure.",
+      "Real-time and background jobs run in-process (SignalR + Hangfire): one deployable, zero extra infrastructure.",
     ],
     metrics: [
       { label: "Restaurants live", value: "15+" },
       { label: "Menu freshness", value: "<5s" },
       { label: "Avg. basket lift", value: "+30%" },
     ],
-    note: "Private client product — code not public.",
+    note: "Private client product. Code not public.",
   },
   {
     name: "TaskMind",
@@ -53,7 +53,7 @@ export const featuredContent: FeaturedProject[] = [
     highlights: [
       "Agentic plan → act → verify → report loop over ~40 server-side tools, streamed live over SSE.",
       "Layered scope guardrails (deterministic pre-filter + policy prompt + output sanitizer) keep it strictly a task assistant at zero extra cost.",
-      "Clean Architecture backend — swapping SQLite → Postgres was a connection-string change.",
+      "Clean Architecture backend: swapping SQLite → Postgres was a connection-string change.",
       "Model-agnostic across OpenRouter's tool-capable models; switching mid-chat preserves history.",
     ],
     links: [
@@ -68,7 +68,7 @@ export const featuredContent: FeaturedProject[] = [
         icon: "api",
       },
     ],
-    note: "Hosted on a free tier — the first request after idle can take ~1 minute to wake.",
+    note: "Hosted on a free tier. The first request after idle can take ~1 minute to wake.",
   },
   {
     name: "Shongi",
@@ -90,6 +90,6 @@ export const featuredContent: FeaturedProject[] = [
       "Early intent gating and multi-tier model routing across providers to cut LLM cost.",
       "Live disease-trend detection via autonomous web search to ground nearest-doctor recommendations.",
     ],
-    note: "Built at Sasthotech — internal product.",
+    note: "Built at Sasthotech. Internal product.",
   },
 ];

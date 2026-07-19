@@ -5,7 +5,7 @@ export const researchContent: ResearchItem[] = [
     title:
       "Advancing Glioma Segmentation: A Robust 3D Residual Attention U-Net Framework for Multimodal MRI Images",
     publication:
-      "3rd International Conference on Computing Advancements (ICCA '24) — ACM Digital Library",
+      "3rd International Conference on Computing Advancements (ICCA '24), ACM Digital Library",
     publisher: "ACM",
     doi: "10.1145/3723178.3723308",
     year: "2025",

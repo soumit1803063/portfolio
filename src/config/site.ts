@@ -5,7 +5,7 @@ export const siteConfig: Profile = {
   brand: "Now You See Me",
   title: "Software Engineer · Backend & AI",
   tagline:
-    "Software engineer building scalable backend systems and production AI — from multi-tenant SaaS platforms to agentic LLM pipelines.",
+    "Software engineer building scalable backend systems and production AI, from multi-tenant SaaS platforms to agentic LLM pipelines.",
   email: "soumitdas0410@gmail.com",
   phone: "+880 1871 773734",
   location: "Dhaka, Bangladesh",

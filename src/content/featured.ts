@@ -63,11 +63,6 @@ export const featuredContent: FeaturedProject[] = [
         icon: "live",
       },
       {
-        label: "Source",
-        href: "https://github.com/soumit-kaz/todo",
-        icon: "github",
-      },
-      {
         label: "API",
         href: "https://todo-api-wwze.onrender.com/api/help",
         icon: "api",

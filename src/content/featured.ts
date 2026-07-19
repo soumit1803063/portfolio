@@ -5,7 +5,7 @@ export const featuredContent: FeaturedProject[] = [
     name: "Ochel",
     tagline:
       "Multi-tenant SaaS platform for augmented-reality restaurant menus.",
-    context: "Personal project · Full-stack architecture & implementation",
+    context: "Freelance client project · Full-stack architecture & implementation",
     status: "Live in production",
     recent: true,
     stack: [
@@ -31,7 +31,7 @@ export const featuredContent: FeaturedProject[] = [
       { label: "Menu freshness", value: "<5s" },
       { label: "Avg. basket lift", value: "+30%" },
     ],
-    note: "Private product — code not public.",
+    note: "Private client product — code not public.",
   },
   {
     name: "TaskMind",

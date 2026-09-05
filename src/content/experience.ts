@@ -60,7 +60,7 @@ export const experienceContent: ExperienceItem[] = [
     role: "Developer",
     company: "Sasthotech",
     location: "Rajshahi, Bangladesh",
-    period: "Nov 2023 – Dec 2024",
+    period: "Jan 2023 – Dec 2024",
     employmentType: "Full-time",
     projects: [
       {

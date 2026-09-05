@@ -16,8 +16,10 @@ export const researchContent: ResearchItem[] = [
     title:
       "BanglaOngko: A New Dataset for Accurate Bengali Mathematical Expression Detection Utilizing YOLOv8 Architecture",
     publication:
-      "2nd International Conference on Big Data, IoT, and Machine Learning (BIM 2023), Daffodil International University & Jahangirnagar University",
-    year: "2023",
+      "2nd International Conference on Big Data, IoT, and Machine Learning (BIM 2023); published as a book chapter by Taylor & Francis",
+    publisher: "Taylor & Francis",
+    doi: "10.1201/9781003605508-4",
+    year: "2025",
     description:
       "Handwritten Bengali mathematical expressions converted to printed text using YOLOv8 for digit/operator detection and a novel statistical algorithm for expression reconstruction.",
   },

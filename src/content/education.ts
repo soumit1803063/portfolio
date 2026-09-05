@@ -13,6 +13,7 @@ export const educationContent: EducationItem[] = [
     degree: "Higher Secondary School Certificate (HSC)",
     institution: "Govt. City College, Chattogram",
     gpa: "5.00 / 5.00",
+    year: "2018",
   },
   {
     degree: "Secondary School Certificate (SSC)",

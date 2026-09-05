@@ -71,6 +71,25 @@ export const featuredContent: FeaturedProject[] = [
     note: "Hosted on a free tier. The first request after idle can take ~1 minute to wake.",
   },
   {
+    name: "StopHere",
+    tagline:
+      "Multi-tenant restaurant management platform with a synced customer-facing storefront.",
+    context: "Personal project · Full-stack",
+    stack: [
+      "React",
+      "Django REST Framework",
+      "Django ORM",
+      "PostgreSQL",
+      "Pytest",
+      "GitHub Actions",
+    ],
+    highlights: [
+      "Each owner manages one menu centrally and syncs it both ways with a custom customer-facing storefront over tenant-scoped REST APIs.",
+      "Every Django ORM queryset, DRF serializer, and permission class is scoped to the tenant, so one tenant can never read another's data.",
+      "Pytest unit tests running in CI on GitHub Actions.",
+    ],
+  },
+  {
     name: "Shongi",
     tagline:
       "Live patient-facing health assistant built on a multi-agent architecture.",
@@ -90,6 +109,6 @@ export const featuredContent: FeaturedProject[] = [
       "Early intent gating and multi-tier model routing across providers to cut LLM cost.",
       "Live disease-trend detection via autonomous web search to ground nearest-doctor recommendations.",
     ],
-    note: "Built at Sasthotech. Internal product.",
+    note: "Built at Sasthotech. Internal product. Previously named Sasthochat.",
   },
 ];
